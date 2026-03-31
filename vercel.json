@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "packages/cli/src/vercel-entry.ts",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "packages/cli/templates/**",
+          "packages/nodes-base/dist/**",
+          "packages/editor-ui/dist/**"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(api|rest|webhooks|form)(.*)",
+      "dest": "packages/cli/src/vercel-entry.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "packages/cli/src/vercel-entry.ts"
+    }
+  ]
+}

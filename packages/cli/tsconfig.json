@@ -1,13 +1,15 @@
 {
 	"extends": [
-		"@n8n/typescript-config/tsconfig.common.json",
-		"@n8n/typescript-config/tsconfig.backend.json"
+		"../@n8n/typescript-config/tsconfig.common.json",
+		"../@n8n/typescript-config/tsconfig.backend.json"
 	],
 	"compilerOptions": {
 		"rootDir": ".",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"baseUrl": "src",
+		"target": "es2021",
+		"lib": ["es2021", "es2022.error", "dom"],
 		"paths": {
 			"@/*": ["./*"],
 			"@test/*": ["../test/shared/*"],
@@ -18,6 +20,7 @@
 		"strict": false,
 		"useUnknownInCatchVariables": false
 	},
+	"files": [],
 	"include": ["src/**/*.ts", "test/**/*.ts", "src/sso.ee/saml/saml-schema-metadata-2.0.xsd"],
 	"references": [
 		{ "path": "../core/tsconfig.build.json" },

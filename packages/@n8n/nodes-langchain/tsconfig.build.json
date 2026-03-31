@@ -1,6 +1,7 @@
 {
 	"extends": ["./tsconfig.json", "@n8n/typescript-config/modern/tsconfig.cjs.json"],
 	"compilerOptions": {
+		"composite": true,
 		"outDir": "dist",
 		"module": "commonjs",
 		"declaration": true,

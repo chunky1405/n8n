@@ -59,6 +59,7 @@
     "@types/jest": "^29.5.3",
     "@types/node": "*",
     "@types/supertest": "^6.0.3",
+    "@vercel/node": "^3.2.22",
     "babel-plugin-transform-import-meta": "^2.3.2",
     "cross-env": "^7.0.3",
     "eslint": "catalog:",
